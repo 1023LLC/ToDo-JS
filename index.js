@@ -51,9 +51,13 @@ function addItem(){
     items.push(value)
     renderItems()
     input.value = ""
+    saveItems()
 }
 
 function removeItem(idx){
     items.splice(idx, 1)
     renderItems()
+    saveItems()
 }
+
+document.addEventListener("DOMContentLoaded", loadItems)
