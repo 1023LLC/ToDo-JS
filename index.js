@@ -1,4 +1,4 @@
-let items = ['hello', '1023'];
+let items = [];
 
 const itemsDiv = document.getElementById('items')
 
@@ -27,7 +27,6 @@ function renderItems(){
         itemsDiv.appendChild(container)
     }
 }
-renderItems()
 
 function loadItems(){}
 
@@ -35,4 +34,7 @@ function saveItems(){}
 
 function addItem(){}
 
-function removeItem(idx){}
+function removeItem(idx){
+    items.splice(idx, 1)
+    renderItems()
+}
